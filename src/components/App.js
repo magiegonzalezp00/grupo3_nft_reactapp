@@ -4,10 +4,12 @@ import { Routes, Route } from 'react-router-dom';
 import SideBar from './SideBar';
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
-import LastMovieInDb from './LastMovieInDb';
+import LastProductInDb from './LastProductInDb';
 import ContentRowMovies from './ContentRowMovies';
 import AboutPage from './AboutPage';
+import UserList from './UserList';
 import NotFound from './NotFound';
+
 
 function App() {
   return (
@@ -16,10 +18,11 @@ function App() {
         <SideBar />
         <Routes>
           <Route path='/' exact element={<ContentWrapper />} />
-          <Route path='/genres' element={<CategoriesInDb />} />
-          <Route path='/last-movie' element={<LastMovieInDb />} />
-          <Route path='/movies' element={<ContentRowMovies />} />
+          <Route path='/categories' element={<CategoriesInDb />} />
+          <Route path='/last-product' element={<LastProductInDb />} />
+          <Route path='/products' element={<ContentRowMovies />} />
           <Route path='/about/:name' element={<AboutPage />} />
+          <Route path='/users' element={<UserList />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

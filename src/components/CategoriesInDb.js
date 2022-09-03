@@ -1,74 +1,53 @@
-import React from "react";
+import React from 'react';
+import Category from './Category';
 
-function LastMovieInDb() {
-  
-  
-  
-  return (
-    <div className="col-lg-6 mb-4">
-      <div className="card shadow mb-4">
-        <div className="card-header py-3">
-          <h5 className="m-0 font-weight-bold text-gray-800">
-            Categorías
-          </h5>
-        </div>
-        <div className="card-body">
-          <div className="row">
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Acción</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Animación</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Aventura</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Ciencia Ficción</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Comedia</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Documental</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Drama</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Fantasia</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Infantiles</div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-4">
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">Musical</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+class CategoriesInDb extends React.Component {
+    state = {
+        categoriesList: [],
+        overOnH6: false
+    }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/api/categories')
+            .then(response => response.json())
+            .then(categories => {
+                this.setState({
+                    categoriesList: categories.data
+                });
+            })
+            .catch(err => console.log(err));
+    }
+
+    handleMouseOver = () => {
+        this.setState({ overOnH6: !this.state.overOnH6 });
+    }
+
+
+    render() {
+        return (
+            <React.Fragment>
+                {/*<!-- Categories in DB -->*/}
+                <div className="col-lg-8 mb-4">
+                    <div className="card shadow mb-7">
+                        <div className="card-header mt-3 py-7">
+                            <h6 onClick={this.handleMouseOver} className="m-0 font-weight-bold text-gray-800">Categorias en Base de Datos</h6>
+                        </div>
+                        <div className={`card-body ${this.state.overOnH6 && 'bg-secondary'}`}>
+                            <div className="row">
+                                {
+                                    this.state.categoriesList.map((category, index) => {
+                                        return <Category category={category.name} key={index} />
+                                    })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </React.Fragment>
+        )
+    }
+
 }
 
-export default LastMovieInDb;
+export default CategoriesInDb;

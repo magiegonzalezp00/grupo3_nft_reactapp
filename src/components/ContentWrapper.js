@@ -2,10 +2,12 @@ import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
+
 function ContentWrapper() {
     const [totalProducts, setTotalProducts] = React.useState(0)
     const [totalPremium, setTotalPremium] = React.useState(0)
     const [mostPurchased, setMostPurchased] = React.useState(0)
+    
     React.useEffect(() => {
         fetch('http://localhost:3000/api/products')
             .then(res => res.json())

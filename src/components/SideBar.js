@@ -23,7 +23,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span>
+                        <span>Dashboard - I Love NFT</span>
                     </Link>
                 </li>
 
@@ -31,29 +31,36 @@ function SideBar(){
                 <hr className="sidebar-divider"/>
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Páginas</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="/genres">
+                    <Link className="nav-link collapsed" to="/categories">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Categorias</span>
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
+                {/*<!-- Nav Item - ProductTables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/last-movie">
-                        <i className="fas fa-fw fa-chart-area"></i>
+                    <Link className="nav-link" to="/last-product">
+                        <i className="fas fa-fw fa-ProductTable-area"></i>
                         <span>Último producto</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/movies">
+                    <Link className="nav-link" to="/products">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Productos</span>
+                    </Link>
+                </li>
+                {/*<!-- Nav Item - Tables -->*/}
+                <li className="nav-item">
+                    <Link className="nav-link" to="/users">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Usuarios</span>
                     </Link>
                 </li>
 
