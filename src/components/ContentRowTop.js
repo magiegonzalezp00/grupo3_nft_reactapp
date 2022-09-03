@@ -14,8 +14,8 @@ function ContentRowTop(props){
 				
 					{/*<!-- Content Row Movies-->*/}
 					<ContentRowMovies total={props.totalProducts} premium={props.totalPremium} mostPurchased={props.mostPurchased}/>
-					<ContentRowCenter />
-					<ProductTable />
+					<ContentRowCenter lastProduct={props.lastProduct}/>
+					<ProductTable products={props.products}/>
 	
 				</div>
 				{/*<!--End Content Row Top-->*/}

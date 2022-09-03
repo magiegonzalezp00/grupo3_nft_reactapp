@@ -19,9 +19,6 @@ function App() {
         <Routes>
           <Route path='/' exact element={<ContentWrapper />} />
           <Route path='/categories' element={<CategoriesInDb />} />
-          <Route path='/last-product' element={<LastProductInDb />} />
-          <Route path='/products' element={<ContentRowMovies />} />
-          <Route path='/about/:name' element={<AboutPage />} />
           <Route path='/users' element={<UserList />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

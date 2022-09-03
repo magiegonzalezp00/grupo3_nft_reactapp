@@ -31,7 +31,6 @@ class UserList extends React.Component {
                                 <tr>
                                     <th>Id</th>
                                     <th>Nombre</th>
-                                    <th>Apellido</th>
                                     <th>Email</th>
                                     <th>Rol</th>
                                 </tr>

@@ -17,7 +17,7 @@ function ProductRow(props) {
                 {props.product.autor}
             </td>
             <td>
-                {props.product.category_id}
+                {props.product.category?.name}
             </td>
             
         </tr>

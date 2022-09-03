@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+//meter logo en assets y reemplazar aca abajo:
 import image from '../assets/images/logo-DH.png';
 
 function SideBar(){
@@ -41,21 +41,6 @@ function SideBar(){
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - ProductTables -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/last-product">
-                        <i className="fas fa-fw fa-ProductTable-area"></i>
-                        <span>Último producto</span>
-                    </Link>
-                </li>
-
-                {/*<!-- Nav Item - Tables -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/products">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Productos</span>
-                    </Link>
-                </li>
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/users">
