@@ -50,7 +50,7 @@ function ContentRowMovies(props){
         icon:'fa-user-check'
     }
     
-    let cartProps = [total, totalPremiun, mostPurchased];
+    let cartProps = [total, totalPremiun, mostPurchased, lastAdded, lastDays];
     return (
         
         <div className="row">
