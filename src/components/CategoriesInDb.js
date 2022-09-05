@@ -1,12 +1,10 @@
 import React from 'react';
 import Category from './Category';
-
 class CategoriesInDb extends React.Component {
     state = {
         categoriesList: [],
         overOnH6: false
     }
-
     componentDidMount() {
         fetch('http://localhost:3000/api/categories')
             .then(response => response.json())
@@ -17,12 +15,9 @@ class CategoriesInDb extends React.Component {
             })
             .catch(err => console.log(err));
     }
-
     handleMouseOver = () => {
         this.setState({ overOnH6: !this.state.overOnH6 });
     }
-
-
     render() {
         return (
             <React.Fragment>
@@ -43,11 +38,8 @@ class CategoriesInDb extends React.Component {
                         </div>
                     </div>
                 </div>
-
             </React.Fragment>
         )
     }
-
 }
-
 export default CategoriesInDb;

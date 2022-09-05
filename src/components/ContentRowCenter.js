@@ -6,11 +6,11 @@ function ContentRowCenter(props){
     return (
         <div className="row">
             
-            {/*<!-- Last Movie in DB -->*/}
+            {/*<!-- Last Product in DB -->*/}
             <LastProductInDb product={props.lastProduct}/>
             {/*<!-- End content row last movie in Data Base -->*/}
 
-            {/*<!-- Genres in DB -->*/}
+            {/*<!-- Categories in DB -->*/}
             <CategoriesInDb />
 
         </div>

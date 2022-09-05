@@ -6,7 +6,6 @@ import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
 import LastProductInDb from './LastProductInDb';
 import ContentRowMovies from './ContentRowMovies';
-import AboutPage from './AboutPage';
 import UserList from './UserList';
 import NotFound from './NotFound';
 

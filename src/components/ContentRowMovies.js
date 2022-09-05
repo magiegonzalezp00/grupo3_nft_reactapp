@@ -3,7 +3,7 @@ import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+/* <!-- Total productos--> */
 
 
 function ContentRowMovies(props){
@@ -14,7 +14,7 @@ function ContentRowMovies(props){
         icon: 'fa-clipboard-list'
     }
     
-    /* <!-- Total awards --> */
+    /* <!-- Total premiun --> */
     
     let totalPremiun = {
         title:' Total premiun', 
@@ -23,12 +23,30 @@ function ContentRowMovies(props){
         icon:'fa-award'
     }
     
-    /* <!-- Actors quantity --> */
+    /* <!-- Más comprados --> */
     
     let mostPurchased = {
         title:'Más comprados' ,
         color:'warning',
         cuantity: props.mostPurchased,
+        icon:'fa-user-check'
+    }
+
+    /* <!-- Ultimos agregados --> */
+    
+    let lastAdded = {
+        title:'Últimos agregados' ,
+        color:'warning',
+        cuantity: props.lastAdded,
+        icon:'fa-user-check'
+    }
+
+    /* <!-- Más comprados --> */
+    
+    let lastDays = {
+        title:'Últimos días' ,
+        color:'warning',
+        cuantity: props.lastDays,
         icon:'fa-user-check'
     }
     

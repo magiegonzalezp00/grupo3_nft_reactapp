@@ -9,6 +9,8 @@ function ContentWrapper() {
     const [mostPurchased, setMostPurchased] = React.useState(0)
     const [lastProductInDb, setLastProductInDb] = React.useState(null)
     const [products, setProducts] = React.useState(null)
+    const [lastAdded, setLastAdded] = React.useState(0)
+    const [lastDays, setLastDays] = React.useState(0)
     
     React.useEffect(() => {
         fetch('http://localhost:3000/api/products')
@@ -20,6 +22,8 @@ function ContentWrapper() {
                 setMostPurchased(data.countByCategory['Más comprados'])
                 setLastProductInDb(data.products[data.products.length-1])
                 setProducts(data.products)
+                setLastAdded(data.countByCategory['Últimos agregados'])
+                setLastDays(data.countByCategory['Últimos días'])
             })
     }, [])
     return (
@@ -35,6 +39,8 @@ function ContentWrapper() {
                         mostPurchased={mostPurchased}
                         lastProduct={lastProductInDb}
                         products={products}
+                        lastAdded={lastAdded}
+                        lastDays={lastDays}
                     />
                     <Footer />
                 </div>

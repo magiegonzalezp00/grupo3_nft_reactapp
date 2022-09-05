@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 //meter logo en assets y reemplazar aca abajo:
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logo_NFT-logo.png';
 
 function SideBar(){
     return(
