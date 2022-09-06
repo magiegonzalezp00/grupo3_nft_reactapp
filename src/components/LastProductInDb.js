@@ -15,7 +15,7 @@ function LastProductInDb(props){
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={`http://localhost:3000/images/productImg/${props.product?.image}`} alt=" Star Wars - Mandalorian "/>
                     </div>
                     <p>{props.product?.description}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3000/product/detail/${props.product?.id}`}>View movie detail</a>
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href={`http://localhost:3000/product/detail/${props.product?.id}`}>View product detail</a>
                 </div>
                 </>
                 }

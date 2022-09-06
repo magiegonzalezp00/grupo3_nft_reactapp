@@ -13,7 +13,7 @@ function ContentRowTop(props){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies total={props.totalProducts} premium={props.totalPremium} mostPurchased={props.mostPurchased} lastAdded={props.lastAdded} lastDays={props.lastDays}/>
+					<ContentRowMovies total={props.totalProducts} premium={props.totalPremium} mostPurchased={props.mostPurchased} lastAdded={props.lastAdded} lastDays={props.lastDays} totalUsers={props.totalUsers}/>
 					<ContentRowCenter lastProduct={props.lastProduct}/>
 					<ProductTable products={props.products}/>
 	

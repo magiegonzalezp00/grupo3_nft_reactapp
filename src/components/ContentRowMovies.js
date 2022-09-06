@@ -50,7 +50,14 @@ function ContentRowMovies(props){
         icon:'fa-user-check'
     }
     
-    let cartProps = [total, totalPremiun, mostPurchased, lastAdded, lastDays];
+    let totalUsers = {
+        title:'Usuarios' ,
+        color:'warning',
+        cuantity: props.totalUsers,
+        icon:'fa-clipboard-list'
+    }
+
+    let cartProps = [total, totalPremiun, mostPurchased, lastAdded, lastDays, totalUsers];
     return (
         
         <div className="row">

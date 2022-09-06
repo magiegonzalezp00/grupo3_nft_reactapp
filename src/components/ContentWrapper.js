@@ -11,6 +11,7 @@ function ContentWrapper() {
     const [products, setProducts] = React.useState(null)
     const [lastAdded, setLastAdded] = React.useState(0)
     const [lastDays, setLastDays] = React.useState(0)
+    const [totalUsers, setTotalUsers] = React.useState(0)
     
     React.useEffect(() => {
         fetch('http://localhost:3000/api/products')
@@ -24,6 +25,7 @@ function ContentWrapper() {
                 setProducts(data.products)
                 setLastAdded(data.countByCategory['Últimos agregados'])
                 setLastDays(data.countByCategory['Últimos días'])
+                setTotalUsers(data.count)
             })
     }, [])
     return (
@@ -41,6 +43,7 @@ function ContentWrapper() {
                         products={products}
                         lastAdded={lastAdded}
                         lastDays={lastDays}
+                        totalUsers={totalUsers}
                     />
                     <Footer />
                 </div>
