@@ -25,7 +25,7 @@ function ContentWrapper() {
                 setProducts(data.products)
                 setLastAdded(data.countByCategory['Últimos agregados'])
                 setLastDays(data.countByCategory['Últimos días'])
-                setTotalUsers(data.count)
+                setTotalUsers(4)
             })
     }, [])
     return (
